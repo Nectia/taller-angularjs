@@ -27,7 +27,7 @@
 
 ## Arquitectura AngularJS
 
-![Arquitectura](arquitectura.png)
+![Arquitectura](sesion1/arquitectura.png)
 
 ---
 

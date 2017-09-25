@@ -27,7 +27,7 @@
 
 ## Arquitectura AngularJS
 
-![Arquitectura](sesion1/arquitectura.png)
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/arquitectura.png" width="500">
 
 ---
 

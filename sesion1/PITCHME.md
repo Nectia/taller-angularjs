@@ -3,12 +3,38 @@
 
 ---
 
-## Prueba h2
+## Objetivos
+
+1. Entender que es AngularJS
+2. Arquitectura de AngularJS
+3. MVW
+4. Data Binding
+5. Scope en AngularJS
+6. Hola Mundo AngularJS!
 
 ---
 
-### Prueba h3
+## Qué es AngularJS?
+
+* Framework MVW Javascript
+* Componentes Reutilizables
+* Testeable
+* Inyección de dependencias
+* Validación de formularios
+* Data Binding
 
 ---
 
-#### Prueba h4
+## Arquitectura AngularJS
+
+---
+
+## Data Binding
+
+---
+
+## Scope en AngularJS
+
+---
+
+## Hola Mundo AngularJS

@@ -27,6 +27,8 @@
 
 ## Arquitectura AngularJS
 
+![Arquitectura](arquitectura.png)
+
 ---
 
 ## Data Binding

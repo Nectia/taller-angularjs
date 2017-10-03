@@ -34,7 +34,7 @@
 ## Data Binding
 
 <p style="font-size: 30px">
-<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/two-way-binding.png?raw=true" align="right" width="500">
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/two-way-binding.png?raw=true" align="right" width="400">
 
 Data-binding es una forma automática de actualizar la vista cuando ocurra un cambio en el modelo, y viceversa, actualizar el modelo cuando hay un cambio en la vista, por ejemplo, escribir en un input.
 </p>

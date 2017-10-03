@@ -36,7 +36,7 @@
 
 ## Data Binding
 
-<p style="font-size: 30px" >
+<p style="font-size: 30px">
 <img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/two-way-binding.png?raw=true" align="right" width="400">
 
 Data-binding es una forma automática de actualizar la vista cuando ocurre un cambio en el modelo, y viceversa, actualizar el modelo cuando hay un cambio en la vista, por ejemplo, escribir en un input.
@@ -46,6 +46,7 @@ Data-binding es una forma automática de actualizar la vista cuando ocurre un ca
 
 ## Controllers
 
+<p style="font-size: 30px">
 * Son objetos que permiten enlazar el modelo con la vista, y controlar los eventos generados
 * Se enlazan mediante la directiva ng-controller
 * Se les pueden inyectar constantes o servicios
@@ -56,6 +57,7 @@ Data-binding es una forma automática de actualizar la vista cuando ocurre un ca
 	* Filtrar una salida - Utilizar filtros
 	* Compartir estado con otros controladores - Utilizar servicios
 	* Controlar el ciclo de vida de otros componentes, por ejemplo crear instancias de servicios
+</p>
 
 ```javascript
 var myApp = angular.module('myApp',[]);
@@ -69,7 +71,9 @@ myApp.controller('GreetingController', ['$scope', function($scope) {
 
 ## Templates
 
+<p style="font-size: 30px">
 Un template es código HTML que contiene elementos especificos de AngularJS y su sintaxis. AngularJS combina los templates con la información que se encuentra en el modelo y renderiza esto dinamicamente.
+</p>
 
 ```html
 <html ng-app>

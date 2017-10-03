@@ -35,6 +35,8 @@
 
 Data-binding es una forma automática de actualizar la vista cuando ocurra un cambio en el modelo, y viceversa, actualizar el modelo cuando hay un cambio en la vista, por ejemplo, escribir en un input.
 
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/two-way-binding.png?raw=true">
+
 ---
 
 ## Scope en AngularJS

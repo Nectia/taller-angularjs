@@ -44,7 +44,7 @@ Data-binding es una forma automática de actualizar la vista cuando ocurre un ca
 ## Scope en AngularJS
 
 <p style="font-size: 30px" >
-<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/scope?raw=true" align="right" width="400">
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/scope.png?raw=true" align="right" width="400">
 
 El scope es un objeto que hace referencia al modelo, los scopes estan organizados de forma geragica similar a la estructura del DOM, los scopes pueden escuchar eventos y propagar los mismos
 </p>
@@ -53,7 +53,7 @@ El scope es un objeto que hace referencia al modelo, los scopes estan organizado
 
 ## Digest Cycle
 
-<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/digestcycle?raw=true">
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/digestcycle.png?raw=true">
 
 ---
 

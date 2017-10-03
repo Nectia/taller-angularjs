@@ -27,20 +27,33 @@
 
 ## Arquitectura AngularJS
 
-<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/arquitectura.png?raw=true" width="500">
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/arquitectura.png?raw=true" width="500">
 
 ---
 
 ## Data Binding
 
-<p style="font-size: 30px">
-<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/two-way-binding.png?raw=true" align="right" width="400">
+<p style="font-size: 30px" >
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/two-way-binding.png?raw=true" align="right" width="400">
 
-Data-binding es una forma automática de actualizar la vista cuando ocurra un cambio en el modelo, y viceversa, actualizar el modelo cuando hay un cambio en la vista, por ejemplo, escribir en un input.
+Data-binding es una forma automática de actualizar la vista cuando ocurre un cambio en el modelo, y viceversa, actualizar el modelo cuando hay un cambio en la vista, por ejemplo, escribir en un input.
 </p>
+
 ---
 
 ## Scope en AngularJS
+
+<p style="font-size: 30px" >
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/scope?raw=true" align="right" width="400">
+
+El scope es un objeto que hace referencia al modelo, los scopes estan organizados de forma geragica similar a la estructura del DOM, los scopes pueden escuchar eventos y propagar los mismos
+</p>
+
+---
+
+## Digest Cycle
+
+<img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/digestcycle?raw=true">
 
 ---
 

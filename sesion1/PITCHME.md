@@ -237,11 +237,10 @@ myApp.run(['apiToken', function(apiToken){
 
 ## Provider
 
-<p style="font-size: 30px">
+<p style="font-size: 20px">
 El provider es el caso más genérico de servicio, que además de generar un servicio inyectable durante la fase de ejecución e inyectar dependencias (DI) en su definición, proporciona una API para la configuración del servicio antes de que se inicie la aplicación.
 
 Un provider se definiría de la siguiente forma:
-</p>
 
 ```javascript
 myApp.provider('logger', function(){
@@ -259,11 +258,9 @@ debug: function(msg){  if(logToConsole){ console.log(msg);} }
 })
 ```
 
-<p style="font-size: 30px">
 Donde los métodos de this conforman la API de configuración, y el método this.$get equivale a una factoría.
 
 Para configurar el servicio logger, tendríamos que usar su API en la fase de configuración, inyectando el loggerProvider:
-</p>
 
 ```javascript
 myApp.config(['loggerProvider', function(loggerProvider){
@@ -271,9 +268,7 @@ myApp.config(['loggerProvider', function(loggerProvider){
 }])
 ```
 
-<p style="font-size: 30px">
 Luego en la fase de ejecución, utilizaríamos el servicio logger del modo habitual:
-</p>
 
 ```javascript
 myApp.run(['logger', function(logger){

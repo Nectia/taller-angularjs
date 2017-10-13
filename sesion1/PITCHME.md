@@ -273,7 +273,7 @@ Luego en la fase de ejecución, utilizaríamos el servicio logger del modo habit
 
 ---
 
-## NgRepeat
+## Ng-Repeat
 
 Sintaxis
 
@@ -291,7 +291,7 @@ Sintaxis
 
 ---
 
-## NgIf
+## Ng-If
 
 Sintaxis
 
@@ -304,7 +304,7 @@ Sintaxis
 
 ---
 
-## NgClick
+## Ng-Click
 
 Sintaxis
 

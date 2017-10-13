@@ -246,11 +246,7 @@ Un provider se definiría de la siguiente forma:
 ```javascript
 myApp.provider('logger', function(){
   var logToConsole = false;
-
-  this.enableConsole = function(flag){
-    logToConsole = flag;
-  };
-
+  this.enableConsole = function(flag){ logToConsole = flag; };
   this.$get = function(){
     return { 
 		debug: function(msg){  if(logToConsole){ console.log(msg);} }

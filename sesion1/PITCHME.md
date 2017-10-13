@@ -270,3 +270,49 @@ myApp.config(['loggerProvider', function(loggerProvider){
 <p style="font-size: 15px">
 Luego en la fase de ejecución, utilizaríamos el servicio logger del modo habitual
 </p>
+
+---
+
+## NgRepeat
+
+Sintaxis
+
+```javascript
+<div ng-repeat="item in items track by $index">
+  {{n}}
+</div>
+```
+
+```javascript
+<div ng-repeat="model in collection track by model.id">
+  {{model.name}}
+</div>
+```
+
+---
+
+## NgIf
+
+Sintaxis
+
+```javascript
+<ANY
+  ng-if="expression">
+...
+</ANY>
+```
+
+---
+
+## NgClick
+
+Sintaxis
+
+```javascript
+<button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>
+<span>
+  count: {{count}}
+</span>
+```

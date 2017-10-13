@@ -108,3 +108,152 @@ El scope es un objeto que hace referencia al modelo, los scopes estan organizado
 ---
 
 ## Hola Mundo AngularJS
+
+---
+
+## Servicios
+
+<p style="font-size: 30px" >
+Un servicio es un objeto JavaScript Singleton que nos permite obtener información. Estos objetos tienen métodos que sirven para mantener los datos en el ciclo de vida de la aplicación y se comunican atravez de los controladores de una manera consistente.
+</p>
+
+---
+
+## Constants
+
+Constant sirve para almacenar valores simples de cualquier tipo que no deben cambiar, NO podemos inyectar dependencias (DI) en su definición, y tampoco es configurable, pero SI puede inyectarse en funciones de configuración.
+
+Un ejemplo de definición de constante sería el siguiente:
+
+```javascript
+myApp.constant('SERVERS',{
+	DEVELOPMENT: "http://localhost:8080/app", 
+	PRODUCTION:"http://myDomain.com/app"
+});
+```
+Y se utilizaría (tanto en config, como en run, controller, service, etc. ) del siguiente modo:
+
+```javascript
+myApp.config(['SERVERS', function(SERVERS){
+    console.log(SERVERS.PRODUCTION);
+}]);
+```
+
+---
+
+## Value
+
+Value nos permite definir objetos simples y primitivas que se pueden inyectar únicamente durante la fase de ejecución. NO podemos inyectar dependencias (DI) en su definición ni es configurable.
+
+Algunos ejemplos serían los siguientes:
+
+```javascript
+myApp.value('randomize',function(){ 
+    return Math.floor(Math.random()*10000);
+})
+myApp.value('token','a1234567890');
+myApp.value('User',{'id': 'someId'})
+```
+
+Se utilizarían en la fase de ejecución (run, controller, service, etc. ) del siguiente modo:
+
+```javascript
+myApp.run(['randomize', 'User', function(randomize, User){
+    var num = randomize();
+    User.id = num;
+}]);
+```
+
+---
+
+## Service
+
+Un servicio es una función constructor que define el servicio. Este servicio se puede inyectar únicamente durante la fase de ejecución. No obstante, SI podemos inyectar dependencias (DI) en su definición, aunque no es configurable.
+
+Internamente, Angular utiliza el método new sobre este constructor a la hora de instanciar el servicio, por lo que podemos añadirle propiedades con this. Ese objeto this es exactamente lo que nos devuelve el servicio.
+
+Veamos un ejemplo de definición de servicio, donde inyectamos una dependencia (el value token del punto anterior):
+
+```javascript
+myApp.service('AuthBearer', ['token', function(token) {
+    this.authValue = "bearer " + token;
+}]);
+```
+
+Y se utilizaría en fase de ejecución (run, controller, service, etc. ) del siguiente modo:
+
+```javascript
+myApp.run(['AuthBearer', function(AuthBearer){
+    console.log(AuthBearer.authValue);
+}]);
+```
+
+---
+
+## Factory
+
+Una factoría es un caso más genérico de service, más enfocado a la inicialización del servicio dado que no devuelve el constructor sino el objeto en sí mismo. Como en el servicio, se puede inyectar únicamente durante la fase de ejecución, y SI podemos inyectar dependencias (DI) en su definición, aunque no es configurable.
+
+Un ejemplo de definición sería el siguiente:
+```javascript
+myApp.factory('apiToken', ['$window', 'clientId', function apiTokenFactory($window, clientId) {
+  var encrypt = function(data1, data2) {
+    // NSA-proof encryption algorithm:
+    return (data1 + ':' + data2).toUpperCase();
+  };
+  var secret = $window.localStorage.getItem('myApp.secret');
+  var apiToken = encrypt(clientId, secret);
+
+  return apiToken;
+}]);
+```
+
+Y lo inyectaríamos como un servicio:
+
+```javascript
+myApp.run(['apiToken', function(apiToken){
+    console.log(apiToken);
+}])
+```
+
+---
+
+## Provider
+
+El provider es el caso más genérico de servicio, que además de generar un servicio inyectable durante la fase de ejecución e inyectar dependencias (DI) en su definición, proporciona una API para la configuración del servicio antes de que se inicie la aplicación.
+
+Un provider se definiría de la siguiente forma:
+
+```javascript
+myApp.provider('logger', function(){
+  var logToConsole = false;
+
+  this.enableConsole = function(flag){
+    logToConsole = flag;
+  };
+
+  this.$get = function(){
+    return { 
+debug: function(msg){  if(logToConsole){ console.log(msg);} }
+    };
+  };
+})
+```
+
+Donde los métodos de this conforman la API de configuración, y el método this.$get equivale a una factoría.
+
+Para configurar el servicio logger, tendríamos que usar su API en la fase de configuración, inyectando el loggerProvider:
+
+```javascript
+myApp.config(['loggerProvider', function(loggerProvider){
+  loggerProvider.enableConsole(true);
+}])
+```
+
+Luego en la fase de ejecución, utilizaríamos el servicio logger del modo habitual:
+
+```javascript
+myApp.run(['logger', function(logger){
+    logger.debug('Hello world');
+}])
+```

@@ -268,11 +268,5 @@ myApp.config(['loggerProvider', function(loggerProvider){
 ```
 
 <p style="font-size: 15px">
-Luego en la fase de ejecución, utilizaríamos el servicio logger del modo habitual:
+Luego en la fase de ejecución, utilizaríamos el servicio logger del modo habitual
 </p>
-
-```javascript
-myApp.run(['logger', function(logger){
-    logger.debug('Hello world');
-}])
-```

@@ -105,12 +105,6 @@ El scope es un objeto que hace referencia al modelo, los scopes estan organizado
 
 <img src="https://github.com/Nectia/taller-angularjs/blob/master/sesion1/assets/digestcycle.png?raw=true">
 
----
-
-## Hola Mundo AngularJS
-
----
-
 ## Servicios
 
 <p style="font-size: 30px">
